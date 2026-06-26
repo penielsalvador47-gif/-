@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>梨花's Flower Shop — Luxury Floral Boutique</title>
+  <meta name="description" content="梨花's Flower Shop — Fresh, elegant, and vibrant flowers. Wedding bouquets, premium gift flowers, and custom arrangements in Tainan, Taiwan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Italiana&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Petal rain overlay (auto-runs 5s on load) -->
+  <div id="petal-rain" aria-hidden="true"></div>
+
+  <!-- Top Bar -->
+  <header class="top-bar" data-testid="top-bar">
+    <div class="container top-bar__inner">
+      <a href="#home" class="brand" data-testid="brand-logo">
+        <span class="brand__mark">梨</span>
+        <span class="brand__name">
+          <span class="brand__main">梨花's Flower Shop</span>
+          <span class="brand__sub" data-i18n="brand.tagline">Luxury Floral Boutique</span>
+        </span>
+      </a>
+
+      <nav class="nav" data-testid="primary-nav">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#product" data-i18n="nav.product">Product</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#promo" data-i18n="nav.promo">Promotion</a>
+        <a href="#book" data-i18n="nav.reserve">Reserve</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="top-bar__actions">
+        <button id="lang-toggle" class="lang-toggle" data-testid="lang-toggle" aria-label="Switch language">
+          <span class="lang-toggle__current">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__other">繁中</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero" data-testid="hero">
+    <div class="hero__image" style="background-image: url('images/hero.jpg');"></div>
+    <div class="hero__veil"></div>
+    <div class="container hero__content">
+      <p class="eyebrow" data-i18n="hero.eyebrow">— Tainan · Since 2018 —</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line" data-i18n="hero.title1">Where every petal</span>
+        <span class="hero__title-line hero__title-line--italic" data-i18n="hero.title2">whispers love.</span>
+      </h1>
+      <p class="hero__lede" data-i18n="hero.lede">Fresh, elegant, and vibrant flowers — hand-arranged next to Kun Shan University, delivered with care to every celebration.</p>
+      <div class="hero__cta">
+        <a href="#gallery" class="btn btn--primary" data-testid="hero-cta-gallery" data-i18n="hero.cta1">Explore Arrangements</a>
+        <a href="#book" class="btn btn--ghost" data-testid="hero-cta-reserve" data-i18n="hero.cta2">Reserve a Bouquet</a>
+      </div>
+      <div class="hero__meta">
+        <div><span class="num">700</span><span class="lbl" data-i18n="hero.from">From NT$</span></div>
+        <div class="divider"></div>
+        <div><span class="num">1,500</span><span class="lbl" data-i18n="hero.upto">Up to NT$</span></div>
+        <div class="divider"></div>
+        <div><span class="num">50%</span><span class="lbl" data-i18n="hero.off">Off Today</span></div>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- PRODUCT INFO -->
+  <section id="product" class="section section--product" data-testid="product-section">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow" data-i18n="product.eyebrow">— Our Signature —</p>
+        <h2 class="section__title" data-i18n="product.title">梨花's Flower Shop</h2>
+        <p class="section__sub" data-i18n="product.sub">A flower shop that offers good quality of products and services, located next to Kun Shan University. We use flowers that are fresh, elegant, and vibrant — crafted to make our customers truly satisfied.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="feature-card">
+          <span class="feature-card__num">01</span>
+          <h3 data-i18n="feat1.t">Fresh, Daily-Sourced Stems</h3>
+          <p data-i18n="feat1.d">Hand-picked from local growers each morning, every stem arrives at peak bloom.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__num">02</span>
+          <h3 data-i18n="feat2.t">Elegant, Couture Arrangements</h3>
+          <p data-i18n="feat2.d">From soft blush bouquets to grand wedding pieces, each design is a study in refined beauty.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__num">03</span>
+          <h3 data-i18n="feat3.t">Customised To Your Story</h3>
+          <p data-i18n="feat3.d">Birthdays, proposals, opening ceremonies — share your moment and we'll compose the perfect arrangement.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__num">04</span>
+          <h3 data-i18n="feat4.t">Vibrant, Long-Lasting Blooms</h3>
+          <p data-i18n="feat4.d">Quality first. Our flowers stay beautiful long after they leave our boutique.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section--about" data-testid="about-section">
+    <div class="container about__grid">
+      <div class="about__image-wrap">
+        <img src="images/about.jpg" alt="Floral arrangements at 梨花's Flower Shop" />
+        <div class="about__badge">
+          <span class="about__badge-num">7+</span>
+          <span class="about__badge-lbl" data-i18n="about.years">Years of Craft</span>
+        </div>
+      </div>
+      <div class="about__text">
+        <p class="eyebrow" data-i18n="about.eyebrow">— Our Story —</p>
+        <h2 class="section__title" data-i18n="about.title">A boutique born from a love letter to flowers.</h2>
+        <p data-i18n="about.p1">梨花's Flower Shop began as a small atelier with a single idea: that every flower, when chosen with care, can carry a feeling words cannot. Today, our boutique next to Kun Shan University is a quiet sanctuary of blush peonies, soft roses, and gilded ribbons.</p>
+        <p data-i18n="about.p2">We believe flowers are more than décor — they are the language of love, celebration, and remembrance. Each arrangement is composed by hand, with the patience of a couturier and the eye of an artist.</p>
+        <ul class="about__values">
+          <li><span class="dot"></span><span data-i18n="about.v1">Elegant · Feminine · Romantic</span></li>
+          <li><span class="dot"></span><span data-i18n="about.v2">Warm · Modern · Vibrant</span></li>
+          <li><span class="dot"></span><span data-i18n="about.v3">Freshness, quality, and a touch of gold.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section section--gallery" data-testid="gallery-section">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <p class="eyebrow" data-i18n="gallery.eyebrow">— The Collection —</p>
+        <h2 class="section__title" data-i18n="gallery.title">Bouquets &amp; Arrangements</h2>
+        <p class="section__sub" data-i18n="gallery.sub">Browse our signature pieces. Each one can be customised to your colour story, budget, and occasion.</p>
+      </div>
+
+      <div class="gallery-grid" data-testid="gallery-grid">
+        <figure class="gallery-item" data-img="images/bouquet1.jpg">
+          <img src="images/bouquet1.jpg" alt="Blush Romance bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g1.t">Blush Romance</h4>
+            <p data-i18n="g1.d">Garden roses · eucalyptus · ivory ribbon</p>
+            <span class="price">NT$ 1,200</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet2.jpg">
+          <img src="images/bouquet2.jpg" alt="Ivory Sonata bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g2.t">Ivory Sonata</h4>
+            <p data-i18n="g2.d">White peonies · lisianthus · gold trim</p>
+            <span class="price">NT$ 1,500</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet3.jpg">
+          <img src="images/bouquet3.jpg" alt="Rose Couture bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g3.t">Rose Couture</h4>
+            <p data-i18n="g3.d">Pink garden roses · baby's breath</p>
+            <span class="price">NT$ 1,100</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet4.jpg">
+          <img src="images/bouquet4.jpg" alt="Petite Amour bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g4.t">Petite Amour</h4>
+            <p data-i18n="g4.d">Mini bouquet · pastel medley</p>
+            <span class="price">NT$ 700</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet5.jpg">
+          <img src="images/bouquet5.jpg" alt="Atelier Bloom bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g5.t">Atelier Bloom</h4>
+            <p data-i18n="g5.d">Designer mix · seasonal stems</p>
+            <span class="price">NT$ 1,300</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet6.jpg">
+          <img src="images/bouquet6.jpg" alt="Tender Whisper bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g6.t">Tender Whisper</h4>
+            <p data-i18n="g6.d">Soft pink · cream · sage greens</p>
+            <span class="price">NT$ 950</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet7.jpg">
+          <img src="images/bouquet7.jpg" alt="Maison Rose arrangement" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g7.t">Maison Rose</h4>
+            <p data-i18n="g7.d">Boxed arrangement · for the home</p>
+            <span class="price">NT$ 1,400</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet8.jpg">
+          <img src="images/bouquet8.jpg" alt="Bridal Veil bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g8.t">Bridal Veil</h4>
+            <p data-i18n="g8.d">Wedding bouquet · ivory &amp; champagne</p>
+            <span class="price">NT$ 1,500</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet9.jpg">
+          <img src="images/bouquet9.jpg" alt="Garden Soirée bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g9.t">Garden Soirée</h4>
+            <p data-i18n="g9.d">Garden style · airy &amp; romantic</p>
+            <span class="price">NT$ 1,250</span>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-img="images/bouquet10.jpg">
+          <img src="images/bouquet10.jpg" alt="Spring Letter bouquet" loading="lazy" />
+          <figcaption>
+            <h4 data-i18n="g10.t">Spring Letter</h4>
+            <p data-i18n="g10.d">Tulips &amp; ranunculus medley</p>
+            <span class="price">NT$ 850</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <section id="promo" class="section section--promo" data-testid="promo-section">
+    <div class="container promo__inner">
+      <div class="promo__ribbon"><span data-i18n="promo.ribbon">Limited-Time Event</span></div>
+      <h2 class="promo__title">
+        <span class="promo__pct">50%</span>
+        <span class="promo__off" data-i18n="promo.off">OFF</span>
+      </h2>
+      <p class="promo__slogan" data-i18n="promo.slogan">"Every bloom, half the price. All the love."</p>
+      <p class="promo__sub" data-i18n="promo.sub">Celebrating you — 梨花's Flower Shop is offering a 50% discount for every customer. Mention this campaign when you reserve.</p>
+
+      <div class="promo__cards">
+        <div class="promo-card">
+          <span class="promo-card__icon">✦</span>
+          <h4 data-i18n="pc1.t">Welcome Discount</h4>
+          <p data-i18n="pc1.d">50% off your first bouquet, all collections included.</p>
+        </div>
+        <div class="promo-card">
+          <span class="promo-card__icon">✦</span>
+          <h4 data-i18n="pc2.t">Anniversary Gift</h4>
+          <p data-i18n="pc2.d">Complimentary gold ribbon &amp; handwritten card on every order.</p>
+        </div>
+        <div class="promo-card">
+          <span class="promo-card__icon">✦</span>
+          <h4 data-i18n="pc3.t">Wedding Package</h4>
+          <p data-i18n="pc3.d">Custom consultation for bridal bouquets &amp; venue florals.</p>
+        </div>
+      </div>
+
+      <a href="#book" class="btn btn--gold" data-i18n="promo.cta">Claim Your Bloom</a>
+    </div>
+  </section>
+
+  <!-- RESERVE -->
+  <section id="reserve" class="section section--reserve" data-testid="reserve-section">
+    <div class="container reserve__grid">
+      <div class="reserve__intro">
+        <p class="eyebrow" data-i18n="reserve.eyebrow">— Reservation Guidelines —</p>
+        <h2 class="section__title" data-i18n="reserve.title">Reserve early. Receive beautifully.</h2>
+        <p data-i18n="reserve.p1">Contact us in advance for early and customised orders. Whether it's a birthday, a wedding, or a moment that simply deserves flowers, we will design something only for you.</p>
+        <ul class="reserve__list">
+          <li><span class="dot"></span><span data-i18n="reserve.l1">Customised bouquets — please reserve at least 2 days in advance.</span></li>
+          <li><span class="dot"></span><span data-i18n="reserve.l2">Wedding florals — please reserve 2–4 weeks in advance.</span></li>
+          <li><span class="dot"></span><span data-i18n="reserve.l3">Same-day pickup available for our signature collection.</span></li>
+        </ul>
+      </div>
+      <aside class="reserve__card">
+        <h3 data-i18n="reserve.hours">Opening Hours</h3>
+        <div class="reserve__hours">
+          <p><span data-i18n="reserve.days">Monday — Sunday</span></p>
+          <p class="reserve__time">9:00 AM — 5:00 PM</p>
+        </div>
+        <a href="tel:0900578537" class="btn btn--primary btn--block" data-testid="reserve-call">📞 0900-578-537</a>
+        <a href="mailto:suilihua0207@gmail.com" class="btn btn--ghost btn--block" data-testid="reserve-email" data-i18n="reserve.email">✉ Email Us</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- RESERVATION FORM -->
+  <section id="book" class="section section--book" data-testid="book-section">
+    <div class="container book__grid">
+      <div class="book__intro">
+        <p class="eyebrow" data-i18n="book.eyebrow">— Book a Bouquet —</p>
+        <h2 class="section__title" data-i18n="book.title">Tell us about your moment.</h2>
+        <p class="book__lede" data-i18n="book.lede">Fill in the form and we will reply within the day with a tailored quote, mockup colours, and the perfect bloom choices for your occasion.</p>
+        <ul class="book__perks">
+          <li><span class="dot"></span><span data-i18n="book.perk1">Free consultation · no obligation</span></li>
+          <li><span class="dot"></span><span data-i18n="book.perk2">50% welcome discount applied automatically</span></li>
+          <li><span class="dot"></span><span data-i18n="book.perk3">Same-day reply, Monday – Sunday</span></li>
+        </ul>
+      </div>
+
+      <form id="book-form" class="book__form" data-testid="book-form" novalidate>
+        <div class="book__row">
+          <label class="book__field">
+            <span data-i18n="book.f.name">Your Name *</span>
+            <input type="text" name="name" required autocomplete="name" data-testid="book-name" />
+          </label>
+          <label class="book__field">
+            <span data-i18n="book.f.phone">Phone *</span>
+            <input type="tel" name="phone" required autocomplete="tel" data-testid="book-phone" />
+          </label>
+        </div>
+
+        <label class="book__field">
+          <span data-i18n="book.f.email">Email *</span>
+          <input type="email" name="email" required autocomplete="email" data-testid="book-email" />
+        </label>
+
+        <div class="book__row">
+          <label class="book__field">
+            <span data-i18n="book.f.date">Pickup / Delivery Date *</span>
+            <input type="date" name="date" required data-testid="book-date" />
+          </label>
+          <label class="book__field">
+            <span data-i18n="book.f.occasion">Occasion</span>
+            <select name="occasion" data-testid="book-occasion">
+              <option value="Birthday" data-i18n="occ.birthday">Birthday</option>
+              <option value="Wedding" data-i18n="occ.wedding">Wedding</option>
+              <option value="Anniversary" data-i18n="occ.anniv">Anniversary</option>
+              <option value="Proposal" data-i18n="occ.propose">Proposal</option>
+              <option value="Graduation" data-i18n="occ.grad">Graduation</option>
+              <option value="Opening Ceremony" data-i18n="occ.opening">Opening Ceremony</option>
+              <option value="Get Well" data-i18n="occ.getwell">Get Well</option>
+              <option value="Just Because" data-i18n="occ.just">Just Because</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="book__row">
+          <label class="book__field">
+            <span data-i18n="book.f.budget">Budget</span>
+            <select name="budget" data-testid="book-budget">
+              <option value="NT$ 700 – 900"  data-i18n="bud.s">NT$ 700 – 900</option>
+              <option value="NT$ 900 – 1,200" data-i18n="bud.m">NT$ 900 – 1,200</option>
+              <option value="NT$ 1,200 – 1,500" data-i18n="bud.l">NT$ 1,200 – 1,500</option>
+              <option value="NT$ 1,500+ (Couture)" data-i18n="bud.xl">NT$ 1,500+ (Couture)</option>
+            </select>
+          </label>
+          <label class="book__field">
+            <span data-i18n="book.f.style">Preferred Style</span>
+            <select name="style" data-testid="book-style">
+              <option value="Blush Romance"  data-i18n="g1.t">Blush Romance</option>
+              <option value="Ivory Sonata"   data-i18n="g2.t">Ivory Sonata</option>
+              <option value="Rose Couture"   data-i18n="g3.t">Rose Couture</option>
+              <option value="Petite Amour"   data-i18n="g4.t">Petite Amour</option>
+              <option value="Atelier Bloom"  data-i18n="g5.t">Atelier Bloom</option>
+              <option value="Tender Whisper" data-i18n="g6.t">Tender Whisper</option>
+              <option value="Maison Rose"    data-i18n="g7.t">Maison Rose</option>
+              <option value="Bridal Veil"    data-i18n="g8.t">Bridal Veil</option>
+              <option value="Garden Soirée"  data-i18n="g9.t">Garden Soirée</option>
+              <option value="Spring Letter"  data-i18n="g10.t">Spring Letter</option>
+              <option value="Surprise Me"    data-i18n="book.surprise">Surprise Me</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="book__field">
+          <span data-i18n="book.f.notes">Special Requests</span>
+          <textarea name="notes" rows="4" data-testid="book-notes" placeholder="Colour palette, card message, recipient address, allergies…"></textarea>
+        </label>
+
+        <div class="book__actions">
+          <button type="submit" class="btn btn--primary" data-testid="book-submit" data-i18n="book.submit">Send Reservation</button>
+          <p class="book__hint" data-i18n="book.hint">We reply by phone or email within the day · no spam, ever.</p>
+        </div>
+
+        <div id="book-toast" class="book__toast" role="status" aria-live="polite" data-testid="book-toast" hidden>
+          <strong data-i18n="book.toast.t">Thank you ✿</strong>
+          <span data-i18n="book.toast.d">Your reservation has been prepared. Your email app is opening with the details — just press Send and we'll take it from there.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CUSTOMER SERVICE + PAYMENT -->
+  <section id="contact" class="section section--contact" data-testid="contact-section">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <p class="eyebrow" data-i18n="cs.eyebrow">— Customer Service —</p>
+        <h2 class="section__title" data-i18n="cs.title">We're here, every petal of the way.</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h4 data-i18n="cs.support">Support</h4>
+          <p data-i18n="cs.support.d">Reach our florists Monday to Sunday, 9 AM – 5 PM. We reply within the day, with care.</p>
+          <ul class="contact-list">
+            <li><strong data-i18n="cs.phone">Phone</strong><a href="tel:0900578537">0900-578-537</a></li>
+            <li><strong data-i18n="cs.email">Email</strong><a href="mailto:suilihua0207@gmail.com">suilihua0207@gmail.com</a></li>
+            <li><strong data-i18n="cs.address">Address</strong><span>No.195, Kun-Da Road, Kun-Shan Village, Yong-Kang District, Tainan City 710303, Taiwan</span></li>
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <h4 data-i18n="cs.pay">Payment Methods</h4>
+          <p data-i18n="cs.pay.d">Choose what suits you. All transactions are simple, secure, and friendly.</p>
+          <div class="payments">
+            <div class="pay">
+              <span class="pay__icon">💵</span>
+              <span class="pay__name" data-i18n="pay.cash">Cash on Pickup</span>
+            </div>
+            <div class="pay">
+              <span class="pay__icon">🏦</span>
+              <span class="pay__name" data-i18n="pay.bank">Bank Transfer</span>
+            </div>
+            <div class="pay">
+              <span class="pay__icon">💚</span>
+              <span class="pay__name" data-i18n="pay.line">LINE Pay</span>
+            </div>
+            <div class="pay">
+              <span class="pay__icon">💳</span>
+              <span class="pay__name" data-i18n="pay.card">Credit Card</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div class="map" data-testid="map">
+        <div class="map__head">
+          <p class="eyebrow" data-i18n="cs.find">Find Us</p>
+          <h3 data-i18n="map.title">Next to Kun Shan University</h3>
+          <p class="map__sub" data-i18n="map.sub">A five-minute walk from the main gate. We can't wait to meet you.</p>
+        </div>
+        <div class="map__frame">
+          <iframe
+            data-testid="map-iframe"
+            title="梨花's Flower Shop · Location"
+            src="https://www.google.com/maps?q=No.195%2C%20Kun-Da%20Road%2C%20Kun-Shan%20Village%2C%20Yong-Kang%20District%2C%20Tainan%20City%20710303%2C%20Taiwan&output=embed"
+            width="100%" height="460"
+            style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=No.195%2C+Kun-Da+Road%2C+Kun-Shan+Village%2C+Yong-Kang+District%2C+Tainan+City+710303%2C+Taiwan" target="_blank" rel="noopener" data-testid="map-open" data-i18n="cs.find.cta">Open in Google Maps →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--lg">梨</span>
+        <p class="footer__name">梨花's Flower Shop</p>
+        <p class="footer__tag" data-i18n="footer.tag">Luxury Floral Boutique · Tainan, Taiwan</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h5 data-i18n="footer.visit">Visit</h5>
+          <p>No.195, Kun-Da Road,<br/>Kun-Shan Village,<br/>Yong-Kang District,<br/>Tainan City 710303, Taiwan</p>
+        </div>
+        <div>
+          <h5 data-i18n="footer.hours">Hours</h5>
+          <p data-i18n="footer.hoursVal">Mon — Sun · 9:00 AM – 5:00 PM</p>
+        </div>
+        <div>
+          <h5 data-i18n="footer.contact">Contact</h5>
+          <p>0900-578-537<br/>suilihua0207@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__base">
+      <p>© <span id="year"></span> 梨花's Flower Shop. <span data-i18n="footer.rights">All petals reserved.</span></p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Close" data-testid="lightbox-close">×</button>
+    <img id="lightbox-img" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
